@@ -2,15 +2,21 @@
 var Performance= require('performance-time');
 var perf = new Performance({repeat:100000000});
 
+// Add the task-functions then 'performance-time' will run the all added tasks.
 perf.addTask(swap1, swap2);
 
 // Report about run
 console.log('Way1: ', perf.run());
 
 // Or
-perf.run({repeat:300});
+perf.run({repeat:300});		// 'repeat' only apply to this run.
 console.log('Way2: ', perf.result());
 
+// Clear all tasks added on perf.
+perf.clearTask();
+
+
+/* --- Tasks */
 // Traditional swap which uses three variables
 function swap1() {
 	var a=1, b=2;
