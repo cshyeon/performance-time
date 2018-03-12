@@ -1,5 +1,5 @@
 # performance-time
- Task-based performance measurement utility.
+ Task-based performance measurement utility.  
  performance-time measures the execution time of the code you want to check.
 
 ## Installation
