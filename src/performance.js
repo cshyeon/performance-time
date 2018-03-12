@@ -31,24 +31,24 @@ class Performance {
 	}
 
 	run(options) {
-		this.opt = Object.assign(this.opt, options);
+		let repeat = (options && options.repeat) || this.opt.repeat;
 		this.__result=[];
 
 		let t1, t2, dt;
 		for(let i=0; i< this.__task.length; i++){
 			t1 = Date.now();
-			this.__iter(this.__task[i]);
+			this.__iter(this.__task[i], repeat);
 			t2 = Date.now();
 			dt = t2 - t1;
-			this.__addResult({task:this.__task[i].name, repeat: this.opt.repeat, time: dt});
+			this.__addResult({task:this.__task[i].name, repeat: repeat, time: dt});
 		}
 
 		return this.result();
 	}
 
 	// private method
-	__iter(task) {
-		for(let i=0; i<this.opt.repeat;i++)
+	__iter(task, repeat) {
+		for(let i=0; i<repeat;i++)
 			task();
 	}
 
