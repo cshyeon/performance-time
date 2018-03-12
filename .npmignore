@@ -1,0 +1,11 @@
+# git files
+.git*
+
+# Jetbrains project files
+.idea
+
+# npm files
+package-lock.json
+
+# yarn files
+yarn.lock
