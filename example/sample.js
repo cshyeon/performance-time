@@ -2,10 +2,10 @@
 var Performance= require('performance-time');
 var perf = new Performance({repeat:100000000});
 
-// Add the task-functions then 'performance-time' will run the all added tasks.
+// Add the task-functions
 perf.addTask(swap1, swap2);
 
-// Report about run
+// Run the all added tasks and print report about the run.
 console.log('Way1: ', perf.run());
 
 // Or
