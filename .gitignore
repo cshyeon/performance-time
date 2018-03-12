@@ -2,7 +2,7 @@
 node_modules
 
 # Jetbrains project files
-.idea
+.idea/*
 
 # npm files
 package-lock.json
