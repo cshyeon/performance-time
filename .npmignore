@@ -12,3 +12,9 @@ yarn.lock
 
 # es6 version source directory
 src
+
+# Test directory
+test
+
+# Example directory
+example
