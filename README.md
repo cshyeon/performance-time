@@ -13,22 +13,21 @@ npm install performance-time
 var Performance= require('performance-time');
 var perf = new Performance({repeat:100000000});
 
+// Add the task-functions then 'performance-time' will run the all added tasks.
 perf.addTask(swap1, swap2);
 
 // Report about run
 console.log('Way1: ', perf.run());
-    // printed
-    //Way1:  [ { task: 'swap1', repeat: 100000000, time: 59 },
-    //  { task: 'swap2', repeat: 100000000, time: 454 } ]
 
 // Or
-perf.run({repeat:300});
+perf.run({repeat:300});		// 'repeat' only apply to this run.
 console.log('Way2: ', perf.result());
-    //printed
-    //Way2:  [ { task: 'swap1', repeat: 300, time: 0 },
-    //  { task: 'swap2', repeat: 300, time: 0 } ]
+
+// Clear all tasks added on perf.
+perf.clearTask();
 
 
+/* --- Tasks */
 // Traditional swap which uses three variables
 function swap1() {
 	var a=1, b=2;
