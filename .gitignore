@@ -9,3 +9,6 @@ package-lock.json
 
 # yarn files
 yarn.lock
+
+# dist directory
+dist
