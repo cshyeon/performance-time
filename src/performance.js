@@ -61,4 +61,4 @@ class Performance {
 	}
 }
 
-export default Performance;
+module.exports =  Performance;

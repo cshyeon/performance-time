@@ -9,3 +9,6 @@ package-lock.json
 
 # yarn files
 yarn.lock
+
+# es6 version source directory
+src

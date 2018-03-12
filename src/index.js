@@ -1,3 +1,3 @@
 import Performance from './performance';
 
-export default Performance;
+module.exports = Performance;
