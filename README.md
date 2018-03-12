@@ -1,2 +1,11 @@
 # performance-time
-You can check the performance time of the function in node.js.
+- - -
+ performance-time measures the execution time of the code you want to check.
+
+### Installation
+- - -
+```
+```
+
+### How to use
+---

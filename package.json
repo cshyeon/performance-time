@@ -1,7 +1,7 @@
 {
   "name": "performance-time",
   "version": "1.0.0",
-  "description": "You can check the performance time of the function.",
+  "description": "performance-time measures the execution time of the code you want to check.",
   "main": "./dist/index.js",
   "scripts": {
     "start": "npm run dev",
