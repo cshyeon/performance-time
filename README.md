@@ -8,15 +8,17 @@
 Add name of the tasks to measure performance.
 Tasks must be executable functions or methods.
 
-#### `clearTask()`
+`clearTask()`
+
 Delete all tasks added through addTask.
 
-#### `run( [obj.repeat] )`
+##### `run( [obj.repeat] )`
 Run the all added tasks and return performance time result.
 If add the repeat option, it will apply only to this run.
 Otherwise, the default(repeat = 100000) is applied.
 
-#### `result()`
+  **`result()`**
+
 Returns *Array* about performance time result of the last run.
 
 
