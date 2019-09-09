@@ -1,6 +1,8 @@
 import { expect } from 'chai';
 import Performance from '../dist/index';
 
+const { swap1, swap2 } = require('../src/task');
+
 describe('mainTest', () =>{
 	let performance;
 	beforeEach('instance initialize',() => {
@@ -36,8 +38,8 @@ describe('mainTest', () =>{
 
 	describe('run() and result() Test', function() {
 		it('Answer Test', function() {
-			performance.addTask(()=>{}, function abc(){});
-			performance.run();
+			performance.addTask(swap1, swap2 );
+			console.log('swap1(), swap2() tasks result:', performance.run({repeat: 200000000}));
 
 			let obj = {
 				method: function(){

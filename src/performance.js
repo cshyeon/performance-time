@@ -1,4 +1,7 @@
 "use strict";
+const { warmUpTask } = require('./task');
+
+const WARMUP_REPEAT = 100000000;
 const REPEAT = 100000;
 
 class Performance {
@@ -34,6 +37,9 @@ class Performance {
 		let repeat = (options && options.repeat) || this.opt.repeat;
 		this.__result=[];
 
+		// Added warmUp procedure because occur first task very fast result than others.
+		this.__warmUp(warmUpTask, WARMUP_REPEAT);	
+
 		let t1, t2, dt;
 		for(let i=0; i< this.__task.length; i++){
 			t1 = Date.now();
@@ -47,6 +53,10 @@ class Performance {
 	}
 
 	// private method
+	__warmUp(task, repeat) {
+		this.__iter(task, repeat);
+	}
+
 	__iter(task, repeat) {
 		for(let i=0; i<repeat;i++)
 			task();

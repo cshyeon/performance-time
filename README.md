@@ -2,6 +2,18 @@
  Task-based performance measurement utility.
  performance-time measures the execution time of the code you want to check.
 
+## Patch Note
+- 1.1.0  
+> Added Warmup task that runs before running first task.
+
+As a result, the initial task no longer runs quickly. (Fixed bug)
+```
+swap1(), swap2() tasks result:
+[ { task: 'swap1', repeat: 200000000, time: 620 },
+  { task: 'swap2', repeat: 200000000, time: 611 } ]
+```
+
+
 ## API Reference
 
 `addTask(task1 [, task2, ..., taskN])`
